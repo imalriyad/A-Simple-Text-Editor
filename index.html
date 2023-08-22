@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Text Editor</title>
+    <link rel="shortcut icon" href="./letter-case.png" type="image/x-icon">
+    <!-- tailwind and daisyui -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+   
+ 
+    <style>
+        .bold{
+            font-weight: bold;
+        }
+        .italic{
+            font-style: italic;
+        }
+        .underline{
+            text-decoration: underline;
+        }
+        
+    </style>
+
+</head>
+<body>
+ <main class="p-10 bg-[#94C4FE] mt-20 mx-80 rounded drop-shadow-lg	" >
+
+<!-- Tittle Of editor -->
+    <div class="text-center text-2xl font-bold mb-6"> 
+        <h1 class="text-4xl">A Simple Text Editor</h1>
+    </div>
+
+    <section class="mx-auto max-w-screen-lg">
+    <!-- Main div -->
+
+     <div class="bg-[#c8def8] pt-6 pb-4 px-6 rounded border-black border-[2px]">
+        <div class="items-center flex justify-between px-5 border-gray-600 border-b-[2px]">
+
+            <!-- Left tools -->
+            <div class="flex gap-6 mb-4 items-center text-lg">
+                <span id="bold-icon" class="hover:cursor-pointer">
+                   <i class="fa-solid fa-bold" style="color: #000000;"></i></span>
+                <span id="italic-icon" class="hover:cursor-pointer">
+                   <i class="fa-solid fa-italic" style="color: #000000;"></i></span>
+                <span id="underline-icon" class="hover:cursor-pointer">
+                   <i class="fa-solid fa-underline" style="color: #000000;"></i></span>
+               </div>
+
+          <!-- Middle tools -->
+               <div class="flex gap-6 mb-4 items-center text-lg">
+                 <span id="text-left" class="hover:cursor-pointer">
+                   <i class="fa-solid fa-align-right" style="color: #000000;"></i></span>
+                <span id="text-center" class="hover:cursor-pointer">
+                    <i class="fa-solid fa-align-left" style="color: #000000;"></i></span>
+                <span id="text-right" class="hover:cursor-pointer">
+                    <i class="fa-solid fa-align-center" style="color: #000000;"></i></span>
+               </div>
+               
+               <!-- Right tools -->
+               <div class="flex mb-4 items-center text-lg">
+               <span class="font-semibold">
+                <input type="number" name="" min="16" id="font-size" placeholder="Size" class=" w-14 text-center mr-[5px] font-semibold rounded border-2 border-black placeholder:text-sm placeholder:font-normal"><span class="text-lg">px</span></span>
+               
+               <span class="ml-4 hover:cursor-pointer">
+                <input type="color" name="" id="color-picker">
+               </span>
+                 
+               <span id="font-case" class="ml-5 hover:cursor-pointer">
+                <img src="./letter-case.png" class="w-6" alt="">
+               </span>
+
+               </div>
+        </div>
+
+        <textarea id="text-area" placeholder="Type and style your text " rows="10" class="textarea border-black border-[2px] focus:outline-none textarea-lg w-full rounded-sm mt-4 h-[500px]"></textarea>
+
+     </div>
+    </section>
+ </main>
+
+ <script src="./script.js"></script>
+</body>
+</html>
